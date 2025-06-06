@@ -6,6 +6,8 @@ metadata:
   labels:
     app: test-ping
     zone: group3
+  annotations:
+    fluxcd.io/redeploy-timestamp: "2025-06-06T17:32:00Z"
 spec:
   containers:
   - name: alpine
@@ -25,6 +27,8 @@ metadata:
   labels:
     app: test-ping
     zone: group3
+  annotations:
+    fluxcd.io/redeploy-timestamp: "2025-06-06T17:32:00Z"
 spec:
   containers:
   - name: alpine
