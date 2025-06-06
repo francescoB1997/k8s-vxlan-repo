@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: pod-node5
+  namespace: default
   labels:
     app: test-ping
     zone: group3
@@ -20,6 +21,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: pod-node6
+  namespace: default
   labels:
     app: test-ping
     zone: group3
