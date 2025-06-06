@@ -1,7 +1,7 @@
 apiVersion: crd.projectcalico.org/v1
 kind: IPPool
 metadata:
-  name: vxlan2-pool
+  name: vxlan3-pool
 spec:
   cidr: 10.300.0.0/16
   vxlanMode: Always
