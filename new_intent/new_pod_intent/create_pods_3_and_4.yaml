@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod_c-node1
+  name: pod-c-node1
   namespace: default
   labels:
     app: test-ping
@@ -20,7 +20,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod_d-node2
+  name: pod-d-node2
   namespace: default
   labels:
     app: test-ping
