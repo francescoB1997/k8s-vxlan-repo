@@ -4,6 +4,6 @@ metadata:
   name: default-ipv4-ippool
 spec:
   cidr: 10.244.0.0/16
-  ipipMode: Never
-  vxlanMode: Always
+  ipipMode: Always
+  vxlanMode: Never
   natOutgoing: true
