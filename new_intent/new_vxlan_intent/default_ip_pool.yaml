@@ -10,7 +10,6 @@ metadata:
     kustomize.toolkit.fluxcd.io/namespace: flux-system
   name: default-ipv4-ippool
   resourceVersion: "11374"
-  uid: d9ae4d11-6d34-4f5d-b669-8f11b97ab1b5
 spec:
   allowedUses:
   - Workload
