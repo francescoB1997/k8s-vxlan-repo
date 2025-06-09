@@ -19,6 +19,6 @@ spec:
   disabled: false
   ipipMode: Never
   natOutgoing: true
-  nodeSelector: "zone != 'zone1', zone != 'zone2'"
+  nodeSelector: "zone != 'group1', zone != 'group2'"
 
   vxlanMode: Always
