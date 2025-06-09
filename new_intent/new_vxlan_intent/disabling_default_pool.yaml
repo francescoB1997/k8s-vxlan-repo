@@ -7,5 +7,5 @@ spec:
   ipipMode: Never
   natOutgoing: true
   disabled: false
-  nodeSelector: "zone notin {'zone1','zone2'}"
+  nodeSelector: all()
   vxlanMode: Always
