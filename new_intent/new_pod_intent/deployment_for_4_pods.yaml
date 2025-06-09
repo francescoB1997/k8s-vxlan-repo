@@ -67,6 +67,8 @@ kind: Deployment
 metadata:
   name: pod-c-nodo1
   namespace: default
+  annotations:
+    fluxcd.io/last-applied: "2025-06-09T12:00:00Z"
   labels:
     app: test-ping
     zone: group1
