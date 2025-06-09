@@ -15,7 +15,7 @@ spec:
       capabilities:
         add: ["NET_RAW"]
   nodeSelector:
-    kubernetes.io/hostname: minikube-m03
+    kubernetes.io/hostname: minikube
 ---
 apiVersion: v1
 kind: Pod
