@@ -7,5 +7,5 @@ spec:
   ipipMode: Never
   natOutgoing: true
   disabled: false
-  nodeSelector: all()
+  nodeSelector: "kubernetes.io/hostname != 'minikube' && kubernetes.io/hostname != 'minikube-m02'"
   vxlanMode: Always
