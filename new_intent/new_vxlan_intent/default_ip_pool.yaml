@@ -19,5 +19,6 @@ spec:
   disabled: false
   ipipMode: Never
   natOutgoing: true
-  nodeSelector: all()
+  nodeSelector: "zone != 'zone1', zone != 'zone2'"
+
   vxlanMode: Always
