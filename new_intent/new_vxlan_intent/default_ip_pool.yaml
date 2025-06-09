@@ -1,0 +1,25 @@
+apiVersion: crd.projectcalico.org/v1
+kind: IPPool
+metadata:
+  annotations:
+    projectcalico.org/metadata: '{"creationTimestamp":"2025-06-09T09:05:11Z"}'
+  creationTimestamp: "2025-06-09T09:05:11Z"
+  generation: 6
+  labels:
+    kustomize.toolkit.fluxcd.io/name: cluster-config-sync-job
+    kustomize.toolkit.fluxcd.io/namespace: flux-system
+  name: default-ipv4-ippool
+  resourceVersion: "11374"
+  uid: d9ae4d11-6d34-4f5d-b669-8f11b97ab1b5
+spec:
+  allowedUses:
+  - Workload
+  - Tunnel
+  assignmentMode: Automatic
+  blockSize: 26
+  cidr: 10.244.0.0/16
+  disabled: false
+  ipipMode: Never
+  natOutgoing: true
+  nodeSelector: all()
+  vxlanMode: Always
