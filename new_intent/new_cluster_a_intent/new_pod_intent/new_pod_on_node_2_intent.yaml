@@ -4,6 +4,7 @@ metadata:
   name: alpine-on-m02
   labels:
     app: alpine
+  namespace: default
 spec:
   containers:
   - name: alpine
