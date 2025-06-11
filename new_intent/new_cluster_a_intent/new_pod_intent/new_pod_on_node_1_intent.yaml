@@ -13,4 +13,4 @@ spec:
     securityContext:
       capabilities:
         add: ["NET_RAW"]
-  nodeName: cluster-a-m01
+  nodeName: cluster-a
