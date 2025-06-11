@@ -1,0 +1,129 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-a-node1
+  namespace: default
+  labels:
+    app: test-ping
+    zone: group1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-ping
+      zone: group1
+      pod-name: pod-a-node1
+  template:
+    metadata:
+      labels:
+        app: test-ping
+        zone: group1
+        pod-name: pod-a-node1
+    spec:
+      containers:
+      - name: alpine
+        image: alpine
+        command: ["/bin/sh", "-c", "sleep infinity"]
+        securityContext:
+          capabilities:
+            add: ["NET_RAW"]
+      nodeSelector:
+        kubernetes.io/hostname: minikube
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-b-node2
+  namespace: default
+  labels:
+    app: test-ping
+    zone: group2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-ping
+      zone: group2
+      pod-name: pod-b-node2
+  template:
+    metadata:
+      labels:
+        app: test-ping
+        zone: group2
+        pod-name: pod-b-node2
+    spec:
+      containers:
+      - name: alpine
+        image: alpine
+        command: ["/bin/sh", "-c", "sleep infinity"]
+        securityContext:
+          capabilities:
+            add: ["NET_RAW"]
+      nodeSelector:
+        kubernetes.io/hostname: minikube-m02
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-c-nodo1
+  namespace: default
+  annotations:
+    fluxcd.io/last-applied: "2025-06-09T12:00:00Z"
+  labels:
+    app: test-ping
+    zone: group1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-ping
+      zone: group1
+      pod-name: pod-c-nodo1
+  template:
+    metadata:
+      labels:
+        app: test-ping
+        zone: group1
+        pod-name: pod-c-nodo1
+    spec:
+      containers:
+      - name: alpine
+        image: alpine
+        command: ["/bin/sh", "-c", "sleep infinity"]
+        securityContext:
+          capabilities:
+            add: ["NET_RAW"]
+      nodeSelector:
+        kubernetes.io/hostname: minikube
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-d-nodo2
+  namespace: default
+  labels:
+    app: test-ping
+    zone: group2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-ping
+      zone: group2
+      pod-name: pod-d-nodo2
+  template:
+    metadata:
+      labels:
+        app: test-ping
+        zone: group2
+        pod-name: pod-d-nodo2
+    spec:
+      containers:
+      - name: alpine
+        image: alpine
+        command: ["/bin/sh", "-c", "sleep infinity"]
+        securityContext:
+          capabilities:
+            add: ["NET_RAW"]
+      nodeSelector:
+        kubernetes.io/hostname: minikube-m02
