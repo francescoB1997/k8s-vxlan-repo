@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpine-on-m01
+  labels:
+    app: alpine
+spec:
+  containers:
+  - name: alpine
+    image: alpine
+    command: ["/bin/sh", "-c", "sleep infinity"]
+    securityContext:
+      capabilities:
+        add: ["NET_RAW"]
+  nodeName: cluster-a-m01
