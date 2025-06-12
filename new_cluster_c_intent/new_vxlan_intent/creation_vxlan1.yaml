@@ -1,0 +1,10 @@
+apiVersion: crd.projectcalico.org/v1
+kind: IPPool
+metadata:
+  name: vxlan1-pool
+spec:
+  cidr: 10.100.0.0/16
+  vxlanMode: Always
+  natOutgoing: true
+  nodeSelector: "zone == 'group1'"
+  blockSize: 26
